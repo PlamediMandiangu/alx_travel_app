@@ -1,7 +1,6 @@
 from django.urls import path
-from . import views
+from .views import HelloWorldAPIView
 
 urlpatterns = [
-    # Add your API views here; for now, just a simple example:
-    path('', views.index, name='index'),
+    path('hello/', HelloWorldAPIView.as_view(), name='hello-world'),
 ]
